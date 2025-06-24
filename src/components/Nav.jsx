@@ -3,6 +3,8 @@ import { useSelector } from 'react-redux'
 import { NavLink } from 'react-router-dom'
 
 const Nav = () => {
+// nav Bar ..............
+
   const {user} = useSelector((state) => state.userReducer)
   return (
     <div className='nav w-full px-5 flex flex-wrap items-center justify-between font-semibold text-lg py-2 shadow bg-white'>
