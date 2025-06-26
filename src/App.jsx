@@ -14,7 +14,7 @@ const App = () => {
   }, [user])
 
   return (
-    <div className='head bg-zinc-50'>
+    <div className='head bg-[#1E0F0C]'>
       <Nav/>
       <Mainroutes />
       <ToastContainer />

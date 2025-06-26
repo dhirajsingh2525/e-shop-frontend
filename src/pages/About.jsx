@@ -1,61 +1,67 @@
-import React from 'react';
+import React from "react";
+import { Link } from "react-router-dom";
+
+const mockTopProducts = [
+  {
+    id: 1,
+    title: "Wireless Headphones",
+    image: "https://fakestoreapi.com/img/81fPKd-2AYL._AC_SL1500_.jpg",
+    price: 59.99,
+  },
+  {
+    id: 2,
+    title: "Elegant Leather Bag",
+    image: "https://fakestoreapi.com/img/71YXzeOuslL._AC_UY879_.jpg",
+    price: 89.5,
+  },
+  {
+    id: 3,
+    title: "Casual Men's Shirt",
+    image: "https://fakestoreapi.com/img/71HblAHs5xL._AC_UY879_-2.jpg",
+    price: 25.99,
+  },
+];
 
 const About = () => {
   return (
-    <div className="min-h-screen bg-gradient-to-b from-white to-blue-50 px-6 py-6">
-      {/* Header Section */}
-      <div className="text-center mb-12">
-        <h1 className="text-4xl md:text-5xl font-bold text-gray-800 mb-4">🛍️ E-Shopmart</h1>
-        <p className="text-lg text-gray-600 max-w-xl mx-auto">
-          A modern E-commerce web app built with React, Redux Toolkit & JSON-Server. Fast, modular, and beautiful.
-        </p>
-      </div>
-
-      {/* Features Section */}
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
-        {[
-          { title: '🧾 Authentication', desc: 'Sign up, login, and logout with persistent session using localStorage.' },
-          { title: '📦 Product Management', desc: 'Create, update, and delete products with admin access.' },
-          { title: '🛒 Cart System', desc: 'Add/remove products to cart, update quantity in real time.' },
-          { title: '🔄 Lazy Loading', desc: 'Infinite scroll product listing with smooth UX.' },
-          { title: '👤 User Settings', desc: 'Update profile, delete account, and logout securely.' },
-          { title: '🔥 Responsive UI', desc: 'Fully mobile-friendly design using Tailwind CSS.' },
-        ].map((feature, index) => (
-          <div key={index} className="bg-white p-6 rounded-xl shadow-lg shadow-emerald-500">
-            <h2 className="text-xl font-semibold mb-2 text-gray-700">{feature.title}</h2>
-            <p className="text-gray-600">{feature.desc}</p>
-          </div>
-        ))}
-      </div>
-
-      {/* Tech Stack */}
+    <div className="min-h-screen  px-6 py-10">
       <div className="text-center mb-16">
-        <h2 className="text-2xl font-bold text-gray-800 mb-4">🧠 Tech Stack</h2>
-        <p className="text-gray-600 max-w-xl mx-auto">
-          <strong>Frontend:</strong> React, Tailwind CSS, React Hook Form  
-          <br />
-          <strong>State:</strong> Redux Toolkit, Redux Thunk  
-          <br />
-          <strong>Backend:</strong> JSON Server  
-          <br />
-          <strong>Storage:</strong> localStorage
+        <h1 className="text-4xl md:text-5xl font-bold text-red-300 mb-3">🛍️ E-Shopmart</h1>
+        <p className="text-red-300 max-w-xl mx-auto text-lg">
+          Welcome to E-Shopmart — your one-stop destination for modern and quality products.
+          Discover our top trending items and enjoy seamless shopping.
         </p>
       </div>
 
-      {/* Developer Info */}
-      <div className="text-center text-gray-600">
-        Developed with ❤️ by <span className="font-semibold text-black">Dhiraj Kumar Singh</span>
-        <br />
-        <a
-          href="https://github.com/your-github-profile"
-          target="_blank"
-          className="text-blue-600 underline hover:text-blue-800 mt-2 inline-block"
-        >
-          View on GitHub
-        </a>
+      <div className="mb-10">
+        <h2 className="text-2xl font-semibold text-red-300 mb-6">🔥 Top Products</h2>
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
+          {mockTopProducts.map((product) => (
+            <div
+              key={product.id}
+              className="bg-[#1E0F0C] shadow-emerald-500 shadow-xl p-4 rounded-xl"
+            >
+              <img
+                src={product.image}
+                alt=""
+                className="h-48 w-full object-contain mb-4"
+              />
+              <h3 className="font-semibold text-red-300 text-lg truncate">{product.title}</h3>
+              <p className="text-red-500 font-bold text-xl mt-2">${product.price}</p>
+                <Link className='inline-block mt-4 bg-blue-500 text-white px-4 py-2 rounded' to={`/product-info/${product.id}`}>
+                    View Details
+                  </Link>
+            </div>
+          ))}
+        </div>
+      </div>
+
+      <div className="mt-20 text-center text-gray-500 text-sm">
+        © 2025 E-Shopmart. All rights reserved.
       </div>
     </div>
   );
 };
 
 export default About;
+

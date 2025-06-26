@@ -47,18 +47,18 @@ const Carts = () => {
   return (
     <div key={i}    className="addcart flex items-center justify-between gap-4 mb-5 shadow-md shadow-emerald-500 p-4 rounded-lg ">
       <img src={cart.product.image}    className="addcart-img w-24 h-24 object-contain rounded-md" alt="" />
-      <h1 className='addcart-title'>{cart.product.title}</h1>
+      <h1 className='addcart-title text-red-300'>{cart.product.title}</h1>
       <div className='flex gap-2'>
         <button
          onClick={() =>addcartHandler(i)} 
-        className="addcart-btn w-20 h-10 bg-zinc-700 text-white rounded"
+        className="addcart-btn w-20 h-10 bg-zinc-700 text-red-300 rounded"
         >+</button>
         <span 
-        className="addcart-btn w-20 h-10 pt-2 border border-gray-300 rounded text-center"
+        className="addcart-btn w-20 h-10 pt-2 border border-gray-300 text-red-300 rounded text-center"
         >{cart.quantity}</span>
         <button
          onClick={() => subtractHandler(i)} 
-        className="addcart-btn w-20 h-10 bg-zinc-700 text-white rounded"
+        className="addcart-btn w-20 h-10 bg-zinc-700 text-red-300 text-white rounded"
          >-</button>
       </div>
 
@@ -69,7 +69,7 @@ const Carts = () => {
   );
 })
   return (
-    <div className='px-6 py-6'>{user.cart.length>0 ? cartlist : "no cart added"}</div>
+    <div className='px-6 py-6 text-red-300'>{user.cart.length>0 ? cartlist : "no cart added"}</div>
   )
 }
 

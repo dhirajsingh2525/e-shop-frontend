@@ -30,10 +30,10 @@ const Setting = () => {
         dispatch(asynclogoutuser(user.id))
     }
   return (
-   <div className="flex justify-center items-center px-4 py-6">
+   <div className="flex justify-center bg-[#1E0F0C] items-center px-4 py-6">
       <form
         onSubmit={handleSubmit(updateHandler)}
-        className="w-full max-w-lg bg-white shadow-lg shadow-blue-600 rounded-xl p-8 flex flex-col items-center gap-2"
+        className="w-full max-w-lg bg-white shadow-emerald-400 shadow-xl rounded-xl p-8 flex flex-col items-center gap-2"
       >
         {/* Profile Image */}
         <img
