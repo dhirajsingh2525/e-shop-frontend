@@ -44,9 +44,9 @@ const Nav = () => {
        </div>
        <div>
                <div className="cart-icon relative inline-block px-2 py-2 rounded-full bg-red-300">
-  <img src="https://cdn-icons-png.flaticon.com/512/1170/1170678.png" alt="cart" className="h-10 w-10" />
+  <img src="https://cdn-icons-png.flaticon.com/512/1170/1170678.png" alt="cart" className="cart-icon-img h-10 w-10" />
   {cartCount > 0 && (
-    <span className="absolute -top-1 -right-1 bg-red-500 text-white text-xs px-2 py-0.5 rounded-full font-bold">
+    <span className="cart-icon-text absolute -top-1 -right-1 bg-red-500 text-white text-xs px-2 py-0.5 rounded-full font-bold">
       {cartCount}
     </span>
   )}

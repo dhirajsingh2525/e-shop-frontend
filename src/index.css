@@ -6,11 +6,13 @@
    }
      .nav{
       width: 100%;
-      display: flex;
-      align-items: center;
+      /* display: flex;
+      align-items: center; */
       /* justify-content: space-between; */
         font-size: 10px;
-        padding: 2px;
+        /* padding: 2px; */
+        padding-left: 10px;
+        padding-right: 10px;
      }
      .nav1{
       display: flex;
@@ -104,8 +106,14 @@
      .signup-f-input{
       width: 100%;
      }
-     .cart-icon{
-       margin: 6px;
+     .cart-icon-img{
+      width: 16px;
+      height: 16px;
+     }
+     .cart-icon-text{
+      font-size: 13px;
+      color: red;
+      background-color: transparent;
      }
 
 }
